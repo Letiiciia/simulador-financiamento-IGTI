@@ -2,36 +2,45 @@
 <head lang="pt-BR">
   <meta charset="UTF-8" />
   <title>Simulação financiamento</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<div> <h1>Simulação Financiamento</h1> 
-  <div>
-    <labe for="valor">Valor</labe>
+<div class="flex-container"> 
+  <header>
+    <div class="header">
+      <img src="img/img.jpg" alt="mão com dinheiro">
+      <h1>Simulação Financiamento</h1>
+    </div>
+  </header> 
+  <br>
+  <div class="label">
+   <label id="valor" for="valor">Valor</label>
     <input id="valor" name="valor" type="number" placeholder="Digite o valor"/>
     
-    <labe for="prazo">Prazo (anos)</labe>
-    <input id="prazo" name="prazo" type="number" placeholder="Digite o prazo"/>
-
-    <labe for="juros">Juros ao ano</labe>
-    <input id="juros" name="juros" type="number" placeholder="Digite o juros"/>
-
-    <button id="btn" type="button">Simular</button>
+   <label id="prazo" for="prazo">Prazo (anos)</label>
+      <input id="prazo" name="prazo" type="number" placeholder="Digite o prazo"/>
+   
+   <label id="juros" for="juros">Juros ao ano</label>
+      <input id="juros" name="juros" type="number" placeholder="Digite o juros"/>
+  
+    <button id="btn" type="button"><strong>Simular</strong></button>
   </div>
 </div>
 
 <div>
   <h2>Resultado</h2>
   <div>
-    <labe for="prazoMes">Prazo (meses)</labe>
+    <label id="prazoMes" for="prazoMes">Prazo (meses)</label>
     <input id="prazoMes" name="prazoMes" type="number"/>
     
-    <labe for="juroMes">Juro ao mês</labe>
+    <label id="juroMes" for="juroMes">Juro ao mês</label>
     <input id="juroMes" name="juroMes" type="number"/>
 
-    <labe for="jurosAcumulados">Juros acumulados</labe>
+    <label id="jurosAcumulados" for="jurosAcumulados">Juros acumulados</label>
     <input id="jurosAcumulados" name="jurosAcumulados" type="number"/>
   </div>
 </div>
-  
+  <br>
+  <br>
 <div>
   <table>
     <thead>

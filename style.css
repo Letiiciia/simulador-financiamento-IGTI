@@ -1,0 +1,44 @@
+.header {
+  color: rgb(33, 37, 41);
+  padding: 10px 20px;
+  border: 2px solid rgb(33, 37, 41);
+  text-align: center;
+}
+
+html {
+  font-family: Montserrat, sans-serif;
+  font-size: 16x;
+  text-align: center;
+  border: 10px solid rgb(33, 37, 41);
+}
+
+div.flex-container {
+  padding: 10px;
+  display: flex;
+  display: block;
+}
+
+#btn {
+  background-color: rgb(48, 48, 48);
+  color: aliceblue;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 0px,
+    rgba(0, 0, 0, 0.12) 0px 2px 1px -1px, rgba(0, 0, 0, 0.2) 0px 1px 3px 0px;
+  font-family: Montserrat, sans-serif;
+  right: 500px;
+  width: 100px;
+  border-radius: 2px;
+}
+
+table {
+  margin: auto;
+}
+
+h2 {
+  background-color: rgb(0, 123, 255);
+  border: 2px solid rgb(33, 37, 41);
+}
+
+img {
+  right: 15%;
+  width: 15%;
+}
