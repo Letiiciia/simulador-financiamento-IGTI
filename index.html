@@ -13,30 +13,30 @@
   </header> 
   <br>
   <div class="label">
-   <label id="valor" for="valor">Valor</label>
+   <label for="valor">Valor</label>
     <input id="valor" name="valor" type="number" placeholder="Digite o valor"/>
     
-   <label id="prazo" for="prazo">Prazo (anos)</label>
+   <label for="prazo">Prazo (anos)</label>
       <input id="prazo" name="prazo" type="number" placeholder="Digite o prazo"/>
    
-   <label id="juros" for="juros">Juros ao ano</label>
+   <label for="juros">Juros ao ano</label>
       <input id="juros" name="juros" type="number" placeholder="Digite o juros"/>
   
-    <button id="btn" type="button"><strong>Simular</strong></button>
+    <button id="btn" type="submit"><strong>Simular</strong></button>
   </div>
 </div>
 
 <div>
   <h2>Resultado</h2>
   <div>
-    <label id="prazoMes" for="prazoMes">Prazo (meses)</label>
-    <input id="prazoMes" name="prazoMes" type="number"/>
+    <label for="prazoMes">Prazo (meses)</label>
+    <input id="prazoMes" readonly name="prazoMes"/>
     
-    <label id="juroMes" for="juroMes">Juro ao mês</label>
-    <input id="juroMes" name="juroMes" type="number"/>
+    <label for="juroMes">Juro ao mês</label>
+    <input id="juroMes" readonly name="juroMes"/>
 
-    <label id="jurosAcumulados" for="jurosAcumulados">Juros acumulados</label>
-    <input id="jurosAcumulados" name="jurosAcumulados" type="number"/>
+    <label for="jurosAcumulados">Juros acumulados</label>
+    <input id="jurosAcumulados" readonly name="jurosAcumulados" />
   </div>
 </div>
   <br>
@@ -62,4 +62,6 @@
   </table>
 
 </div>
+
+<script src="simulador.js"></script>
 </body>
