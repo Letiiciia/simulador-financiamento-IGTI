@@ -3,6 +3,7 @@
   padding: 10px 20px;
   border: 2px solid rgb(33, 37, 41);
   text-align: center;
+  
 }
 
 html {
@@ -12,10 +13,12 @@ html {
   border: 10px solid rgb(33, 37, 41);
 }
 
-div.flex-container {
+div.inputs-container {
   padding: 10px;
   display: flex;
   display: block;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #btn {
@@ -31,14 +34,37 @@ div.flex-container {
 
 table {
   margin: auto;
+  border: 2px solid rgb(33, 37, 41);
+  width: 50%;
 }
 
-h2 {
+table th {
+  border: 1px solid rgb(33, 37, 41);
+  padding: 8px;
+}
+
+p {
   background-color: rgb(0, 123, 255);
   border: 2px solid rgb(33, 37, 41);
+  width: 50%;
+  margin: auto;  
 }
 
 img {
   right: 15%;
   width: 15%;
+}
+
+inputs {
+  flex-wrap: wrap;
+}
+
+outputs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+label {
+  justify-content: space-between;
 }

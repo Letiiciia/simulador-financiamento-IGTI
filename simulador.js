@@ -46,10 +46,14 @@ function addInformacoesTabela(valor, prazoTotalMeses, jurosAoMes) {
     let amortizacao = valor / prazoTotalMeses;
     let juros = (valor - amortizacao * i) * jurosAoMes;
 
+    let amortizacaoCalculo =  (valor / prazoTotalMeses).toFixed(2);
+    let jurosCalculo = parseFloat((valor - amortizacao * i) * jurosAoMes).toFixed(2);
+    let totalCalculo = parseFloat(amortizacao + juros).toFixed(2);
+    
     td_pretacao.innerText = i + 1;
-    td_amortizacao.innerText = (valor / prazoTotalMeses).toFixed(2);
-    td_juros.innerText = parseFloat((valor - amortizacao * i) * jurosAoMes).toFixed(2);
-    td_total.innerText = parseFloat(amortizacao + juros).toFixed(2);
+    td_amortizacao.innerText = formatarValor(amortizacaoCalculo);
+    td_juros.innerText = formatarValor(jurosCalculo);
+    td_total.innerText = formatarValor(totalCalculo);
   }
 }
 
@@ -65,7 +69,10 @@ function jurosAcumulado() {
   for(let i = 0; i < prazoTotalMeses; i++){
     jurosAcumulado += parseFloat((valor - amortizacao * i) * juroMes);
   }
-
-  return jurosAcumulado.toFixed(2);
+ 
+  return formatarValor(jurosAcumulado);
 }
 
+function formatarValor (valor) {
+  return Intl.NumberFormat('pt-br', {style: 'currency', currency: 'BRL'}).format(valor);
+}
