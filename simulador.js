@@ -15,17 +15,21 @@ document.getElementById("btn").addEventListener("click", function (e) {
 
   let prazoTotalMeses = prazo * 12;
   let jurosAoMes = Math.pow(1 + juros, 1 / 12) - 1;
- 
+
   addInformacoesTabela(valor, prazoTotalMeses, jurosAoMes);
 
-  let prazoMeses = (document.getElementById("prazoMes").value =
-    prazoTotalMeses);
+  let prazoMeses = (document.getElementById("prazoMes").value = prazoTotalMeses);
   let juroMes = (document.getElementById("juroMes").value = jurosAoMes);
-  let jurosAcumulados = document.getElementById("jurosAcumulados");
+  let jurosAcumulados = document.getElementById("jurosAcumulados").value = jurosAcumulado();
 
   console.log(valor);
   console.log(prazoMeses);
   console.log(juroMes);
+  console.log(jurosAcumulados);
+
+  var testeReal = 200000;
+  var moeda = testeReal.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+  console.log(moeda);
 });
 
 function addInformacoesTabela(valor, prazoTotalMeses, jurosAoMes) {
@@ -44,14 +48,24 @@ function addInformacoesTabela(valor, prazoTotalMeses, jurosAoMes) {
 
     td_pretacao.innerText = i + 1;
     td_amortizacao.innerText = (valor / prazoTotalMeses).toFixed(2);
-    td_juros.innerText = parseFloat(
-      (valor - amortizacao * i) * jurosAoMes
-    ).toFixed(2);
+    td_juros.innerText = parseFloat((valor - amortizacao * i) * jurosAoMes).toFixed(2);
     td_total.innerText = parseFloat(amortizacao + juros).toFixed(2);
   }
 }
 
 function jurosAcumulado() {
-  
+  let prazoTotalMeses = prazo * 12;
+  let valor = document.getElementById("valor").value;
+  let juroMes = document.getElementById("juroMes").value;
+  let amortizacao = (valor / prazoTotalMeses);
+
+
+  let jurosAcumulado = 0;
+
+  for(let i = 0; i < prazoTotalMeses; i++){
+    jurosAcumulado += parseFloat((valor - amortizacao * i) * juroMes);
+  }
+
+  return jurosAcumulado.toFixed(2);
 }
 
