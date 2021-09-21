@@ -6,7 +6,9 @@ Página de simulação de financiamento com base nos valores fornecidos, exibind
 ```
 HTML
 ```
+```
 CSS
+```
 ```
 Javascript
 ```
