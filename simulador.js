@@ -6,6 +6,7 @@ let valor = (document.getElementById("valor").value = valorInicial);
 let prazo = (document.getElementById("prazo").value = prazoInicial);
 let juros = (document.getElementById("juros").value = jurosInicial);
 
+
 document.getElementById("btn").addEventListener("click", function (e) {
   e.preventDefault();
 
